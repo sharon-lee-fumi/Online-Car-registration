@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>Validator</servlet-name>
+        <servlet-class>web.Validator</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AddCar</servlet-name>
+        <servlet-class>web.AddCar</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Search</servlet-name>
+        <servlet-class>web.Search</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ShowAllCars</servlet-name>
+        <servlet-class>web.ShowAllCars</servlet-class>
+        <init-param>
+            <param-name>email</param-name>
+            <param-value>sharon@sheridan.ca</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Validator</servlet-name>
+        <url-pattern>/Validator</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddCar</servlet-name>
+        <url-pattern>/AddCar</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Search</servlet-name>
+        <url-pattern>/Search</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ShowAllCars</servlet-name>
+        <url-pattern>/ShowAllCars</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <welcome-file-list>
+        <welcome-file>myLogin.jsp</welcome-file>
+    </welcome-file-list>
+    <context-param>
+        <param-name>sharon</param-name>
+        <param-value>Sharon Lee</param-value>
+    </context-param>
+</web-app>
